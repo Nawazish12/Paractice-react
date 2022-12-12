@@ -17,7 +17,7 @@ const modulesTypes = [
   },
   {
     component: <Contact />,
-    to: "/contacs",
+    to: "/contacts",
   },
   {
     component: <Details />,
@@ -33,10 +33,7 @@ const App = () => {
         {modulesTypes.map((val) => {
           return <Route path={val.to} element={val.component} />;
         })}
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contacts" element={<Contact />} />
-        <Route path="/details" element={<Details />} /> */}
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </>
   );
