@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "type": "doctors",
+      "active": true,
+      "name": "nawazish",
+      "roll": "admin"
+    },
+    {
+      "id": 2,
+      "type": "electronics",
+      "active": false,
+      "name": "nawazish",
+      "roll": "pos"
+    },
+    {
+      "id": 3,
+      "type": "engineering",
+      "active": true,
+      "name": "john",
+      "roll": "student"
+    },
+    {
+      "id": 4,
+      "type": "electronics",
+      "active": true,
+      "name": "doe",
+      "roll": "teacher"
+    },
+    {
+      "id": 5,
+      "type": "mechatronics",
+      "active": false,
+      "name": "web",
+      "roll": "client"
+    },
+    {
+      "id": 20,
+      "type": "student",
+      "active": false,
+      "name": "noman",
+      "roll": "new "
+    },
+    {
+      "id": 24,
+      "type": "student",
+      "active": true,
+      "name": "usman",
+      "roll": "teacher"
+    }
+  ],
+  "teams": [
+    {
+      "name": "ali",
+      "roll": "admin"
+    },
+    {
+      "name": "nomii",
+      "roll": "pos"
+    },
+    {
+      "name": "pakistan",
+      "roll": "client"
+    }
+  ]
+}

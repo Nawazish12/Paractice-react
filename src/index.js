@@ -5,14 +5,26 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "@tremor/react/dist/esm/tremor.css";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:3004";
+axios.defaults.headers.common["authorization"] = `Bearer token`;
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <QueryClientProvider client={queryClient}>
+    <Provider store={store}>
+      {/* <React.StrictMode> */}
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+      {/* </React.StrictMode> */}
+    </Provider>
+  </QueryClientProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
