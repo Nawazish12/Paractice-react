@@ -9,6 +9,11 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import axios from "axios";
+// import setupLocatorUI from "@locator/runtime";
+
+// if (process.env.NODE_ENV === "development") {
+//   setupLocatorUI();
+// }
 
 axios.defaults.baseURL = "http://localhost:3004";
 axios.defaults.headers.common["authorization"] = `Bearer token`;

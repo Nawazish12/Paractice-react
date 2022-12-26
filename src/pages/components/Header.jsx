@@ -21,6 +21,14 @@ const Header = () => {
         {" "}
         <h1>Details</h1>
       </Link>
+      <Link to="/redux-test">
+        {" "}
+        <h1>Test</h1>
+      </Link>
+      <Link to="/redux-crud">
+        {" "}
+        <h1>Redux Crud</h1>
+      </Link>
     </div>
   );
 };

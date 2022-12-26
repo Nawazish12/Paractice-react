@@ -5,7 +5,24 @@ import Home from "./pages/Home";
 import Details from "./pages/Details";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ReduxTest from "./pages/ReduxTest";
+import GetList from "./pages/reduxCrud/GetList";
 
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Routes>
+        {modulesTypes.map((val) => {
+          return <Route path={val.to} element={val.component} />;
+        })}
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </>
+  );
+};
+
+export default App;
 const modulesTypes = [
   {
     component: <Home />,
@@ -23,20 +40,12 @@ const modulesTypes = [
     component: <Details />,
     to: "/details",
   },
+  {
+    component: <ReduxTest />,
+    to: "/redux-test",
+  },
+  {
+    component: <GetList />,
+    to: "/redux-crud",
+  },
 ];
-
-const App = () => {
-  return (
-    <>
-      <Header />
-      <Routes>
-        {modulesTypes.map((val) => {
-          return <Route path={val.to} element={val.component} />;
-        })}
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-    </>
-  );
-};
-
-export default App;

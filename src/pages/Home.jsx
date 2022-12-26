@@ -3,12 +3,10 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 
 const Home = () => {
-  const activeType = true;
-  const name = "nawazish";
   const { data: userData = [] } = useQuery(
     ["getUserData"],
     () => {
-      return axios.get(`/users?active=${activeType}&name=${name}`);
+      return axios.get(`/users`);
     },
     {
       select: (res) => {
