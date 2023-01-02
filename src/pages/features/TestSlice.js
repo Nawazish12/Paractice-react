@@ -23,6 +23,7 @@ export const TestSlice = createSlice({
         return cur.id !== action.payload;
       });
     },
+
     singleListGet: (state, action) => {
       state.singleDetails = state?.data?.find((singleGet) => {
         return singleGet?.id === action.payload;
